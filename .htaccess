@@ -1,0 +1,9 @@
+# .htaccess
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /js-template/
+  RewriteRule ^index\.html$ - [L]
+  RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d
+  RewriteRule . /js-template/index.html [L]
+</IfModule>
